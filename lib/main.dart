@@ -124,36 +124,36 @@ class MyAppThemeConfing {
   }
 
   TextTheme get enPrimaryTextTheme => GoogleFonts.latoTextTheme(TextTheme(
-        bodyText2: TextStyle(fontSize: 15, color: primaryTextColor),
-        bodyText1: TextStyle(fontSize: 13, color: secondryTextColor),
-        headline6:
+        bodyMedium: TextStyle(fontSize: 15, color: primaryTextColor),
+        bodyLarge: TextStyle(fontSize: 13, color: secondryTextColor),
+        titleLarge:
             TextStyle(fontWeight: FontWeight.bold, color: primaryTextColor),
-        subtitle1: TextStyle(
+        titleMedium: TextStyle(
             fontSize: 16, fontWeight: FontWeight.bold, color: primaryTextColor),
       ));
 
   TextTheme get faPrimaryTextTheme => TextTheme(
-        bodyText2: TextStyle(
+        bodyMedium: TextStyle(
             fontSize: 15,
             height: 1.5,
             color: primaryTextColor,
             fontFamily: faPrimaryFontFamily),
-        bodyText1: TextStyle(
+        bodyLarge: TextStyle(
             fontSize: 13,
             color: secondryTextColor,
             fontFamily: faPrimaryFontFamily),
-        caption: TextStyle(fontFamily: faPrimaryFontFamily),
-        headline6: TextStyle(
+        bodySmall: TextStyle(fontFamily: faPrimaryFontFamily),
+        titleLarge: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
             color: primaryTextColor,
             fontFamily: faPrimaryFontFamily),
-        subtitle1: TextStyle(
+        titleMedium: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.bold,
             color: primaryTextColor,
             fontFamily: faPrimaryFontFamily),
-        button: TextStyle(fontFamily: faPrimaryFontFamily)
+        labelLarge: TextStyle(fontFamily: faPrimaryFontFamily)
       );
 }
 
@@ -228,7 +228,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: [
                           Text(
                             localization.name,
-                            style: Theme.of(context).textTheme.subtitle1,
+                            style: Theme.of(context).textTheme.titleMedium,
                           ),
                           SizedBox(
                             height: 2,
@@ -244,7 +244,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 size: 14,
                                 color: Theme.of(context)
                                     .textTheme
-                                    .bodyText1!
+                                    .bodyLarge!
                                     .color,
                               ),
                               SizedBox(
@@ -252,7 +252,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                               Text(
                                 localization.location,
-                                style: Theme.of(context).textTheme.caption,
+                                style: Theme.of(context).textTheme.bodySmall,
                               ),
                             ],
                           )
@@ -270,7 +270,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 padding: const EdgeInsets.fromLTRB(32, 0, 32, 16),
                 child: Text(
                   localization.summary,
-                  style: Theme.of(context).textTheme.bodyText1,
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
               ),
               Divider(),
@@ -307,7 +307,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Text(
                       localization.skills,
-                      style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                      style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                             fontWeight: FontWeight.w900,
                           ),
                     ),
@@ -391,7 +391,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Text(
                       localization.personalInformation,
-                      style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                      style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                             fontWeight: FontWeight.w900,
                           ),
                     ),
